@@ -1,22 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:provider/provider.dart';
 import 'package:provider_tutorial/common_widgets/avatar.dart';
-import 'package:provider_tutorial/models/avatar_reference.dart';
-import 'package:provider_tutorial/services/firebase_auth_service.dart';
-import 'package:provider_tutorial/services/firebase_storage_service.dart';
-import 'package:provider_tutorial/services/firestore_service.dart';
-import 'package:provider_tutorial/services/image_picker_service.dart';
 
 import 'about_page.dart';
 
 class HomePage extends StatelessWidget {
   Future<void> _signOut(BuildContext context) async {
     try {
-      final auth = Provider.of<FirebaseAuthService>(context, listen: false);
-      await auth.signOut();
+      // TODO: Implement
     } catch (e) {
       print(e);
     }
@@ -34,20 +26,9 @@ class HomePage extends StatelessWidget {
   Future<void> _chooseAvatar(BuildContext context) async {
     try {
       // 1. Get image from picker
-      final imagePicker =
-          Provider.of<ImagePickerService>(context, listen: false);
-      final file = await imagePicker.pickImage(source: ImageSource.gallery);
-      if (file != null) {
-        // 2. Upload to storage
-        final storage =
-            Provider.of<FirebaseStorageService>(context, listen: false);
-        final downloadUrl = await storage.uploadAvatar(file: file);
-        // 3. Save url to Firestore
-        final database = Provider.of<FirestoreService>(context, listen: false);
-        await database.setAvatarReference(AvatarReference(downloadUrl));
-        // 4. (optional) delete local file as no longer needed
-        await file.delete();
-      }
+      // 2. Upload to storage
+      // 3. Save url to Firestore
+      // 4. (optional) delete local file as no longer needed
     } catch (e) {
       print(e);
     }
@@ -88,19 +69,13 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _buildUserInfo({BuildContext context}) {
-    final database = Provider.of<FirestoreService>(context, listen: false);
-    return StreamBuilder<AvatarReference>(
-      stream: database.avatarReferenceStream(),
-      builder: (context, snapshot) {
-        final avatarReference = snapshot.data;
-        return Avatar(
-          photoUrl: avatarReference?.downloadUrl,
-          radius: 50,
-          borderColor: Colors.black54,
-          borderWidth: 2.0,
-          onPressed: () => _chooseAvatar(context),
-        );
-      },
+    // TODO: Download and show avatar from Firebase storage
+    return Avatar(
+      photoUrl: null,
+      radius: 50,
+      borderColor: Colors.black54,
+      borderWidth: 2.0,
+      onPressed: () => _chooseAvatar(context),
     );
   }
 }
