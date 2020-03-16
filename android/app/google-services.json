@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "1036170704189",
+    "firebase_url": "https://klepet-sszg.firebaseio.com",
+    "project_id": "klepet-sszg",
+    "storage_bucket": "klepet-sszg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036170704189:android:3958511bc83d47a5a1c154",
+        "android_client_info": {
+          "package_name": "com.sszg.klepet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036170704189-i392uq6m88c45bgqdeq3oppedbd87tk9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sszg.klepet",
+            "certificate_hash": "428d53a76a7b50b69dde065232735baff3c693c8"
+          }
+        },
+        {
+          "client_id": "1036170704189-tvlpqpoddc8lml06i7lslk0ubgin75q2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGQLQjhx7IxKnRFmLxKWCHGwXHhFAhCy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036170704189-tvlpqpoddc8lml06i7lslk0ubgin75q2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036170704189:android:80b2ed84eb9a510ba1c154",
+        "android_client_info": {
+          "package_name": "com.sszg.provider_tutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036170704189-tvlpqpoddc8lml06i7lslk0ubgin75q2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGQLQjhx7IxKnRFmLxKWCHGwXHhFAhCy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036170704189-tvlpqpoddc8lml06i7lslk0ubgin75q2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
